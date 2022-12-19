@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _Pharm.Classes
 {
@@ -7,14 +8,22 @@ namespace _Pharm.Classes
 
         private Courier _courier;
         private Customer _customer;
-        private double _price;
 
-        public Delivery(DateTime date, string name, string address, Customer customer, double price, Courier courier, Drug drug) : base(date, name, address, drug)
+        public Delivery(DateTime date, string name, string address, Customer customer, Courier courier, List<Drug> drugs) : base(date, name, address, drugs)
         {
             this._customer = customer;
-            this._price = price;
             _courier = courier;
             _courier = courier;
+        }
+
+        private double countPrice()
+        {
+            double temp = 0;
+            foreach(var drug in base.drugs)
+            {
+                temp += drug.price;
+            }
+            return temp;
         }
 
         public Customer customer
@@ -24,7 +33,7 @@ namespace _Pharm.Classes
 
         public double price
         {
-            get { return _price; } set { _price = value; }
+            get { return countPrice(); }
         }
 
         public Courier courier

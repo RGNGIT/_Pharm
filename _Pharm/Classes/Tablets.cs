@@ -13,8 +13,8 @@ namespace _Pharm.Classes
         private string _form;
         private string _kind;
 
-        public Tablets(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, string form, string kind)
-            : base(timeUntil, name, usageMethod, dose, price, group)
+        public Tablets(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, string form, string kind, int amount)
+            : base(timeUntil, name, usageMethod, dose, price, group, amount)
         {
             this._form = form;
             _kind = kind;

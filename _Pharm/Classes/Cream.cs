@@ -13,8 +13,8 @@ namespace _Pharm.Classes
         private bool _isHot;
         private string _zone;
 
-        public Cream(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, bool isHot, string zone)
-            : base(timeUntil, name, usageMethod, dose, price, group)
+        public Cream(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, bool isHot, string zone, int amount)
+            : base(timeUntil, name, usageMethod, dose, price, group, amount)
         {
             _isHot = isHot;
             _zone = zone;

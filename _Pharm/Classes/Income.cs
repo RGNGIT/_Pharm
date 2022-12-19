@@ -14,7 +14,7 @@ namespace _Pharm.Classes
         private int _amount;
         private string _nameOfDrug;
 
-        public Income(DateTime date, string name, string address, int amount, string nameOfDrug) : base(date, name, address)
+        public Income(DateTime date, string name, string address, int amount, string nameOfDrug) : base(date, name, address, null)
         {
             _amount = amount;
             _nameOfDrug = nameOfDrug;

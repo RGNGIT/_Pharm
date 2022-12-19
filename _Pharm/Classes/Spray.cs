@@ -14,8 +14,8 @@ namespace _Pharm.Classes
         private string _zone;
         private string _kind;
 
-        public Spray(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, string zone)
-            : base(timeUntil, name, usageMethod, dose, price, group)
+        public Spray(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, string zone, int amount)
+            : base(timeUntil, name, usageMethod, dose, price, group, amount)
         {
             _zone = zone;
         }

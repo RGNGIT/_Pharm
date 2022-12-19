@@ -9,23 +9,33 @@ namespace _Pharm.Classes
     internal class Order
     {
 
-        private Drug _drug;
+        private List<Drug> _drugs;
         private DateTime _date;
         private string _name;
         private string _address;
 
-        public Order(DateTime date, string name, string address, Drug drug)
+        public Order(DateTime date, string name, string address, List<Drug> drug)
         {
             _date = date;
             _name = name;
             _address = address;
-            _drug = drug;
+            _drugs = drug;
         }
 
-        public Drug drug
+        public double orderSum()
         {
-            get { return _drug; }
-            set { _drug = value; }
+            double temp = 0;
+            foreach(var drug in this._drugs)
+            {
+                temp += drug.price;
+            }
+            return temp;
+        }
+
+        public List<Drug> drugs
+        {
+            get { return _drugs; }
+            set { _drugs = value; }
         }
 
         public DateTime date

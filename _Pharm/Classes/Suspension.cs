@@ -12,8 +12,8 @@ namespace _Pharm.Classes
 
         private string _kind;
 
-        public Suspension(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, string kind)
-            : base(timeUntil, name, usageMethod, dose, price, group)
+        public Suspension(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, string kind, int amount)
+            : base(timeUntil, name, usageMethod, dose, price, group, amount)
         {
             this._kind = kind;
         }

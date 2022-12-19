@@ -10,6 +10,8 @@ namespace _Pharm.Classes
     internal class Drug
     {
 
+        private int _amount;
+
         private DateTime _timeUntil;
         private string _name;
         private string _usageMethod;
@@ -17,7 +19,7 @@ namespace _Pharm.Classes
         private double _price;
         private string _group;
 
-        public Drug(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group)
+        public Drug(DateTime timeUntil, string name, string usageMethod, double dose, double price, string group, int amount)
         {
             this._timeUntil = timeUntil;
             this._name = name;
@@ -25,6 +27,13 @@ namespace _Pharm.Classes
             this._dose = dose;
             this._price = price;
             this._group = group;
+            this.amount = amount;
+        }
+
+        public int amount
+        {
+            get { return _amount; } 
+            set { _amount = value; } 
         }
 
         public DateTime timeUntil

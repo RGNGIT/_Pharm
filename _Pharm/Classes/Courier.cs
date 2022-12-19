@@ -9,11 +9,19 @@ namespace _Pharm.Classes
     internal class Courier
     {
 
+        private string _name;
         private int _deliveryAmount;
 
-        public Courier(int deliveryAmount) 
+        public Courier(string name) 
         {
-            this._deliveryAmount = deliveryAmount;
+            this._name = name;
+            this._deliveryAmount = 0;
+        }
+
+        public string name
+        {
+            get { return _name; }
+            set { _name = value; }
         }
 
         public int deliveryAmount 
