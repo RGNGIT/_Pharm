@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace _Pharm.Classes
 {
     // Суспензия
+    [Serializable]
     internal class Suspension: Drug
     {
 

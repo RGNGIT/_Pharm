@@ -93,38 +93,44 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridViewPerpeturalCustomers = new System.Windows.Forms.DataGridView();
             this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.dataGridViewCouriers = new System.Windows.Forms.DataGridView();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBoxCourierName = new System.Windows.Forms.TextBox();
-            this.buttonAddCourier = new System.Windows.Forms.Button();
-            this.dataGridViewDeliveries = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerDeliveryDate = new System.Windows.Forms.DateTimePicker();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxDeliveryName = new System.Windows.Forms.TextBox();
-            this.textBoxDeliveryAddress = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.comboBoxClients = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.dataGridViewDeliveryDrugs = new System.Windows.Forms.DataGridView();
+            this.label25 = new System.Windows.Forms.Label();
+            this.buttonAddOrder = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.comboBoxCouriers = new System.Windows.Forms.ComboBox();
-            this.buttonAddOrder = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.dataGridViewDeliveryDrugs = new System.Windows.Forms.DataGridView();
-            this.comboBoxDrugToOrder = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.dataGridViewIncome = new System.Windows.Forms.DataGridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBoxClients = new System.Windows.Forms.ComboBox();
+            this.textBoxDeliveryAddress = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxDeliveryName = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dateTimePickerDeliveryDate = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewDeliveries = new System.Windows.Forms.DataGridView();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.buttonIncomeOrder = new System.Windows.Forms.Button();
+            this.textBoxIncomeAmount = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.dateTimePickerDateOfIncome = new System.Windows.Forms.DateTimePicker();
             this.textBoxAddrOfIncome = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.textBoxNameOfIncome = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.dateTimePickerDateOfIncome = new System.Windows.Forms.DateTimePicker();
-            this.textBoxIncomeAmount = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.buttonIncomeOrder = new System.Windows.Forms.Button();
+            this.dataGridViewIncome = new System.Windows.Forms.DataGridView();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBoxDrugToOrder = new System.Windows.Forms.ComboBox();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.buttonAddCourier = new System.Windows.Forms.Button();
+            this.textBoxCourierName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dataGridViewCouriers = new System.Windows.Forms.DataGridView();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.dataGridViewSearch = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControlDrugType.SuspendLayout();
@@ -146,12 +152,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrugToChoose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPerpeturalCustomers)).BeginInit();
             this.tabPage12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveryDrugs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveries)).BeginInit();
             this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncome)).BeginInit();
             this.tabPage14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCouriers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveries)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveryDrugs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncome)).BeginInit();
+            this.tabPage15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -162,6 +170,7 @@
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage14);
+            this.tabControl1.Controls.Add(this.tabPage15);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -803,6 +812,125 @@
             this.tabPage12.Text = "Заказы";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewDeliveryDrugs
+            // 
+            this.dataGridViewDeliveryDrugs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDeliveryDrugs.Location = new System.Drawing.Point(9, 220);
+            this.dataGridViewDeliveryDrugs.Name = "dataGridViewDeliveryDrugs";
+            this.dataGridViewDeliveryDrugs.Size = new System.Drawing.Size(267, 174);
+            this.dataGridViewDeliveryDrugs.TabIndex = 13;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 204);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(107, 13);
+            this.label25.TabIndex = 12;
+            this.label25.Text = "Выбрать лекарства";
+            // 
+            // buttonAddOrder
+            // 
+            this.buttonAddOrder.Location = new System.Drawing.Point(282, 371);
+            this.buttonAddOrder.Name = "buttonAddOrder";
+            this.buttonAddOrder.Size = new System.Drawing.Size(480, 23);
+            this.buttonAddOrder.TabIndex = 11;
+            this.buttonAddOrder.Text = "Заказать";
+            this.buttonAddOrder.UseVisualStyleBackColor = true;
+            this.buttonAddOrder.Click += new System.EventHandler(this.buttonAddOrder_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 164);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 13);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Курьер";
+            // 
+            // comboBoxCouriers
+            // 
+            this.comboBoxCouriers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCouriers.FormattingEnabled = true;
+            this.comboBoxCouriers.Location = new System.Drawing.Point(9, 180);
+            this.comboBoxCouriers.Name = "comboBoxCouriers";
+            this.comboBoxCouriers.Size = new System.Drawing.Size(267, 21);
+            this.comboBoxCouriers.TabIndex = 9;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 123);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 13);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "Клиент";
+            // 
+            // comboBoxClients
+            // 
+            this.comboBoxClients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxClients.FormattingEnabled = true;
+            this.comboBoxClients.Location = new System.Drawing.Point(9, 139);
+            this.comboBoxClients.Name = "comboBoxClients";
+            this.comboBoxClients.Size = new System.Drawing.Size(267, 21);
+            this.comboBoxClients.TabIndex = 7;
+            // 
+            // textBoxDeliveryAddress
+            // 
+            this.textBoxDeliveryAddress.Location = new System.Drawing.Point(9, 100);
+            this.textBoxDeliveryAddress.Name = "textBoxDeliveryAddress";
+            this.textBoxDeliveryAddress.Size = new System.Drawing.Size(267, 20);
+            this.textBoxDeliveryAddress.TabIndex = 6;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 84);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(38, 13);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Адрес";
+            // 
+            // textBoxDeliveryName
+            // 
+            this.textBoxDeliveryName.Location = new System.Drawing.Point(9, 61);
+            this.textBoxDeliveryName.Name = "textBoxDeliveryName";
+            this.textBoxDeliveryName.Size = new System.Drawing.Size(267, 20);
+            this.textBoxDeliveryName.TabIndex = 4;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 45);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 13);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "Название";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(72, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Дата заказа";
+            // 
+            // dateTimePickerDeliveryDate
+            // 
+            this.dateTimePickerDeliveryDate.Location = new System.Drawing.Point(9, 22);
+            this.dateTimePickerDeliveryDate.Name = "dateTimePickerDeliveryDate";
+            this.dateTimePickerDeliveryDate.Size = new System.Drawing.Size(267, 20);
+            this.dateTimePickerDeliveryDate.TabIndex = 1;
+            // 
+            // dataGridViewDeliveries
+            // 
+            this.dataGridViewDeliveries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDeliveries.Location = new System.Drawing.Point(282, 6);
+            this.dataGridViewDeliveries.Name = "dataGridViewDeliveries";
+            this.dataGridViewDeliveries.Size = new System.Drawing.Size(480, 359);
+            this.dataGridViewDeliveries.TabIndex = 0;
+            // 
             // tabPage13
             // 
             this.tabPage13.Controls.Add(this.buttonIncomeOrder);
@@ -825,198 +953,38 @@
             this.tabPage13.Text = "Завоз";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // tabPage14
+            // buttonIncomeOrder
             // 
-            this.tabPage14.Controls.Add(this.buttonAddCourier);
-            this.tabPage14.Controls.Add(this.textBoxCourierName);
-            this.tabPage14.Controls.Add(this.label19);
-            this.tabPage14.Controls.Add(this.dataGridViewCouriers);
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(768, 400);
-            this.tabPage14.TabIndex = 5;
-            this.tabPage14.Text = "Курьеры";
-            this.tabPage14.UseVisualStyleBackColor = true;
+            this.buttonIncomeOrder.Location = new System.Drawing.Point(6, 371);
+            this.buttonIncomeOrder.Name = "buttonIncomeOrder";
+            this.buttonIncomeOrder.Size = new System.Drawing.Size(251, 23);
+            this.buttonIncomeOrder.TabIndex = 15;
+            this.buttonIncomeOrder.Text = "Заказать";
+            this.buttonIncomeOrder.UseVisualStyleBackColor = true;
+            this.buttonIncomeOrder.Click += new System.EventHandler(this.buttonIncomeOrder_Click);
             // 
-            // dataGridViewCouriers
+            // textBoxIncomeAmount
             // 
-            this.dataGridViewCouriers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCouriers.Location = new System.Drawing.Point(263, 6);
-            this.dataGridViewCouriers.Name = "dataGridViewCouriers";
-            this.dataGridViewCouriers.Size = new System.Drawing.Size(499, 388);
-            this.dataGridViewCouriers.TabIndex = 0;
+            this.textBoxIncomeAmount.Location = new System.Drawing.Point(6, 176);
+            this.textBoxIncomeAmount.Name = "textBoxIncomeAmount";
+            this.textBoxIncomeAmount.Size = new System.Drawing.Size(251, 20);
+            this.textBoxIncomeAmount.TabIndex = 14;
             // 
-            // label19
+            // label30
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 6);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 13);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Имя";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(3, 160);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(66, 13);
+            this.label30.TabIndex = 13;
+            this.label30.Text = "Количество";
             // 
-            // textBoxCourierName
+            // dateTimePickerDateOfIncome
             // 
-            this.textBoxCourierName.Location = new System.Drawing.Point(9, 22);
-            this.textBoxCourierName.Name = "textBoxCourierName";
-            this.textBoxCourierName.Size = new System.Drawing.Size(248, 20);
-            this.textBoxCourierName.TabIndex = 2;
-            // 
-            // buttonAddCourier
-            // 
-            this.buttonAddCourier.Location = new System.Drawing.Point(9, 371);
-            this.buttonAddCourier.Name = "buttonAddCourier";
-            this.buttonAddCourier.Size = new System.Drawing.Size(248, 23);
-            this.buttonAddCourier.TabIndex = 3;
-            this.buttonAddCourier.Text = "Добавить";
-            this.buttonAddCourier.UseVisualStyleBackColor = true;
-            this.buttonAddCourier.Click += new System.EventHandler(this.buttonAddCourier_Click);
-            // 
-            // dataGridViewDeliveries
-            // 
-            this.dataGridViewDeliveries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDeliveries.Location = new System.Drawing.Point(282, 6);
-            this.dataGridViewDeliveries.Name = "dataGridViewDeliveries";
-            this.dataGridViewDeliveries.Size = new System.Drawing.Size(480, 359);
-            this.dataGridViewDeliveries.TabIndex = 0;
-            // 
-            // dateTimePickerDeliveryDate
-            // 
-            this.dateTimePickerDeliveryDate.Location = new System.Drawing.Point(9, 22);
-            this.dateTimePickerDeliveryDate.Name = "dateTimePickerDeliveryDate";
-            this.dateTimePickerDeliveryDate.Size = new System.Drawing.Size(267, 20);
-            this.dateTimePickerDeliveryDate.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 6);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 13);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Дата заказа";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 45);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 13);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Название";
-            // 
-            // textBoxDeliveryName
-            // 
-            this.textBoxDeliveryName.Location = new System.Drawing.Point(9, 61);
-            this.textBoxDeliveryName.Name = "textBoxDeliveryName";
-            this.textBoxDeliveryName.Size = new System.Drawing.Size(267, 20);
-            this.textBoxDeliveryName.TabIndex = 4;
-            // 
-            // textBoxDeliveryAddress
-            // 
-            this.textBoxDeliveryAddress.Location = new System.Drawing.Point(9, 100);
-            this.textBoxDeliveryAddress.Name = "textBoxDeliveryAddress";
-            this.textBoxDeliveryAddress.Size = new System.Drawing.Size(267, 20);
-            this.textBoxDeliveryAddress.TabIndex = 6;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 84);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(38, 13);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Адрес";
-            // 
-            // comboBoxClients
-            // 
-            this.comboBoxClients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxClients.FormattingEnabled = true;
-            this.comboBoxClients.Location = new System.Drawing.Point(9, 139);
-            this.comboBoxClients.Name = "comboBoxClients";
-            this.comboBoxClients.Size = new System.Drawing.Size(267, 21);
-            this.comboBoxClients.TabIndex = 7;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 123);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 13);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "Клиент";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 164);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 13);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Курьер";
-            // 
-            // comboBoxCouriers
-            // 
-            this.comboBoxCouriers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCouriers.FormattingEnabled = true;
-            this.comboBoxCouriers.Location = new System.Drawing.Point(9, 180);
-            this.comboBoxCouriers.Name = "comboBoxCouriers";
-            this.comboBoxCouriers.Size = new System.Drawing.Size(267, 21);
-            this.comboBoxCouriers.TabIndex = 9;
-            // 
-            // buttonAddOrder
-            // 
-            this.buttonAddOrder.Location = new System.Drawing.Point(282, 371);
-            this.buttonAddOrder.Name = "buttonAddOrder";
-            this.buttonAddOrder.Size = new System.Drawing.Size(480, 23);
-            this.buttonAddOrder.TabIndex = 11;
-            this.buttonAddOrder.Text = "Заказать";
-            this.buttonAddOrder.UseVisualStyleBackColor = true;
-            this.buttonAddOrder.Click += new System.EventHandler(this.buttonAddOrder_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 204);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(107, 13);
-            this.label25.TabIndex = 12;
-            this.label25.Text = "Выбрать лекарства";
-            // 
-            // dataGridViewDeliveryDrugs
-            // 
-            this.dataGridViewDeliveryDrugs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDeliveryDrugs.Location = new System.Drawing.Point(9, 220);
-            this.dataGridViewDeliveryDrugs.Name = "dataGridViewDeliveryDrugs";
-            this.dataGridViewDeliveryDrugs.Size = new System.Drawing.Size(267, 174);
-            this.dataGridViewDeliveryDrugs.TabIndex = 13;
-            // 
-            // comboBoxDrugToOrder
-            // 
-            this.comboBoxDrugToOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDrugToOrder.FormattingEnabled = true;
-            this.comboBoxDrugToOrder.Location = new System.Drawing.Point(6, 136);
-            this.comboBoxDrugToOrder.Name = "comboBoxDrugToOrder";
-            this.comboBoxDrugToOrder.Size = new System.Drawing.Size(251, 21);
-            this.comboBoxDrugToOrder.TabIndex = 0;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(3, 120);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(62, 13);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "Лекарство";
-            // 
-            // dataGridViewIncome
-            // 
-            this.dataGridViewIncome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewIncome.Location = new System.Drawing.Point(263, 6);
-            this.dataGridViewIncome.Name = "dataGridViewIncome";
-            this.dataGridViewIncome.Size = new System.Drawing.Size(499, 388);
-            this.dataGridViewIncome.TabIndex = 4;
+            this.dateTimePickerDateOfIncome.Location = new System.Drawing.Point(6, 19);
+            this.dateTimePickerDateOfIncome.Name = "dateTimePickerDateOfIncome";
+            this.dateTimePickerDateOfIncome.Size = new System.Drawing.Size(251, 20);
+            this.dateTimePickerDateOfIncome.TabIndex = 12;
             // 
             // textBoxAddrOfIncome
             // 
@@ -1059,38 +1027,139 @@
             this.label29.TabIndex = 7;
             this.label29.Text = "Дата завоза";
             // 
-            // dateTimePickerDateOfIncome
+            // dataGridViewIncome
             // 
-            this.dateTimePickerDateOfIncome.Location = new System.Drawing.Point(6, 19);
-            this.dateTimePickerDateOfIncome.Name = "dateTimePickerDateOfIncome";
-            this.dateTimePickerDateOfIncome.Size = new System.Drawing.Size(251, 20);
-            this.dateTimePickerDateOfIncome.TabIndex = 12;
+            this.dataGridViewIncome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIncome.Location = new System.Drawing.Point(263, 6);
+            this.dataGridViewIncome.Name = "dataGridViewIncome";
+            this.dataGridViewIncome.Size = new System.Drawing.Size(499, 388);
+            this.dataGridViewIncome.TabIndex = 4;
             // 
-            // textBoxIncomeAmount
+            // label26
             // 
-            this.textBoxIncomeAmount.Location = new System.Drawing.Point(6, 176);
-            this.textBoxIncomeAmount.Name = "textBoxIncomeAmount";
-            this.textBoxIncomeAmount.Size = new System.Drawing.Size(251, 20);
-            this.textBoxIncomeAmount.TabIndex = 14;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(3, 120);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(62, 13);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "Лекарство";
             // 
-            // label30
+            // comboBoxDrugToOrder
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 160);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(66, 13);
-            this.label30.TabIndex = 13;
-            this.label30.Text = "Количество";
+            this.comboBoxDrugToOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDrugToOrder.FormattingEnabled = true;
+            this.comboBoxDrugToOrder.Location = new System.Drawing.Point(6, 136);
+            this.comboBoxDrugToOrder.Name = "comboBoxDrugToOrder";
+            this.comboBoxDrugToOrder.Size = new System.Drawing.Size(251, 21);
+            this.comboBoxDrugToOrder.TabIndex = 0;
             // 
-            // buttonIncomeOrder
+            // tabPage14
             // 
-            this.buttonIncomeOrder.Location = new System.Drawing.Point(6, 371);
-            this.buttonIncomeOrder.Name = "buttonIncomeOrder";
-            this.buttonIncomeOrder.Size = new System.Drawing.Size(251, 23);
-            this.buttonIncomeOrder.TabIndex = 15;
-            this.buttonIncomeOrder.Text = "Заказать";
-            this.buttonIncomeOrder.UseVisualStyleBackColor = true;
-            this.buttonIncomeOrder.Click += new System.EventHandler(this.buttonIncomeOrder_Click);
+            this.tabPage14.Controls.Add(this.buttonAddCourier);
+            this.tabPage14.Controls.Add(this.textBoxCourierName);
+            this.tabPage14.Controls.Add(this.label19);
+            this.tabPage14.Controls.Add(this.dataGridViewCouriers);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(768, 400);
+            this.tabPage14.TabIndex = 5;
+            this.tabPage14.Text = "Курьеры";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddCourier
+            // 
+            this.buttonAddCourier.Location = new System.Drawing.Point(9, 371);
+            this.buttonAddCourier.Name = "buttonAddCourier";
+            this.buttonAddCourier.Size = new System.Drawing.Size(248, 23);
+            this.buttonAddCourier.TabIndex = 3;
+            this.buttonAddCourier.Text = "Добавить";
+            this.buttonAddCourier.UseVisualStyleBackColor = true;
+            this.buttonAddCourier.Click += new System.EventHandler(this.buttonAddCourier_Click);
+            // 
+            // textBoxCourierName
+            // 
+            this.textBoxCourierName.Location = new System.Drawing.Point(9, 22);
+            this.textBoxCourierName.Name = "textBoxCourierName";
+            this.textBoxCourierName.Size = new System.Drawing.Size(248, 20);
+            this.textBoxCourierName.TabIndex = 2;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 6);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(29, 13);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Имя";
+            // 
+            // dataGridViewCouriers
+            // 
+            this.dataGridViewCouriers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCouriers.Location = new System.Drawing.Point(263, 6);
+            this.dataGridViewCouriers.Name = "dataGridViewCouriers";
+            this.dataGridViewCouriers.Size = new System.Drawing.Size(499, 388);
+            this.dataGridViewCouriers.TabIndex = 0;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.dataGridViewSearch);
+            this.tabPage15.Controls.Add(this.textBoxSearch);
+            this.tabPage15.Controls.Add(this.label31);
+            this.tabPage15.Controls.Add(this.buttonLoad);
+            this.tabPage15.Controls.Add(this.buttonSave);
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(768, 400);
+            this.tabPage15.TabIndex = 6;
+            this.tabPage15.Text = "Остальное";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Location = new System.Drawing.Point(87, 6);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoad.TabIndex = 1;
+            this.buttonLoad.Text = "Загрузить";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(6, 6);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 0;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 32);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(39, 13);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Поиск";
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(9, 48);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(248, 20);
+            this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
+            // dataGridViewSearch
+            // 
+            this.dataGridViewSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSearch.Location = new System.Drawing.Point(263, 6);
+            this.dataGridViewSearch.Name = "dataGridViewSearch";
+            this.dataGridViewSearch.Size = new System.Drawing.Size(499, 388);
+            this.dataGridViewSearch.TabIndex = 4;
             // 
             // Form1
             // 
@@ -1129,14 +1198,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPerpeturalCustomers)).EndInit();
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveryDrugs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveries)).EndInit();
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncome)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCouriers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveries)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeliveryDrugs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncome)).EndInit();
+            this.tabPage15.ResumeLayout(false);
+            this.tabPage15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1240,6 +1312,12 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button buttonIncomeOrder;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.DataGridView dataGridViewSearch;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label label31;
     }
 }
 

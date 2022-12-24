@@ -8,6 +8,7 @@ using System.Xml.Linq;
 
 namespace _Pharm.Classes
 {
+    [Serializable]
     internal class Income: Order
     {
 

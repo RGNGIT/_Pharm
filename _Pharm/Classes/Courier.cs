@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _Pharm.Classes
 {
+    [Serializable]
     internal class Courier
     {
 

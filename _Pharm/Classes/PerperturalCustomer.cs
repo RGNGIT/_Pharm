@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace _Pharm.Classes
 {
+    [Serializable]
     internal class PerperturalCustomer: Customer
     {
 

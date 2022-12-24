@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace _Pharm.Classes
 {
     // Таблетки
+    [Serializable]
     internal class Tablets: Drug
     {
 

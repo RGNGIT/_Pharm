@@ -45,11 +45,12 @@ namespace _Pharm
             commonGridSetup(dataGridViewSuspension, setupSuspensionGrid);
             commonGridSetup(dataGridViewCream, setupCreamGrid);
             commonGridSetup(dataGridViewSpray, setupSprayGrid);
+            commonGridSetup(dataGridViewSearch);
             checkBoxIsPerpetural.Checked = false;
             #endregion boot
         }
 
-        void commonGridSetup(DataGridView grid, Action additionalGridSetup)
+        void commonGridSetup(DataGridView grid, Action additionalGridSetup = null)
         {
             grid.Rows.Clear();
             grid.Columns.Clear();
@@ -60,7 +61,10 @@ namespace _Pharm
             grid.Columns.Add("_price", "Цена");
             grid.Columns.Add("_date", "Годен до");
             grid.Columns.Add("_amount", "Количество");
-            additionalGridSetup();
+            if(additionalGridSetup != null)
+            {
+                additionalGridSetup();
+            }
         }
 
         void setupTabletsGrid()
@@ -199,6 +203,7 @@ namespace _Pharm
                     ));
                     break;
             }
+            storage.ShitSort();
             refreshDrugToChooseGrid();
         }
 
@@ -392,6 +397,7 @@ namespace _Pharm
         void refreshDrugToChooseGrid()
         {
             dataGridViewDrugToChoose.Rows.Clear();
+            dataGridViewDeliveryDrugs.Rows.Clear();
             foreach (var drug in storage.Drugs)
             {
                 if(drug.amount > 0)
@@ -531,6 +537,48 @@ namespace _Pharm
             Drug drug = storage.Drugs[findDrugIndex(comboBoxDrugToOrder.Text)];
             drug.amount = drug.amount + Convert.ToInt32(textBoxIncomeAmount.Text);
             refreshIncomeGrid();
+        }
+
+        void RefreshAll()
+        {
+            refreshComboBoxes();
+            refreshCouriersGrid();
+            refreshCustomerGrid();
+            refreshDeliveryGrid();
+            refreshDrugToChooseGrid();
+            refreshGrids();
+            refreshIncomeCombo();
+            refreshIncomeGrid();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            storage.SerializeData();
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            storage.DeserializeData();
+            RefreshAll();
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewSearch.Rows.Clear();
+            foreach (var drug in storage.Drugs)
+            {
+                if(drug.name == textBoxSearch.Text)
+                {
+                    dataGridViewSearch.Rows.Add(drug.name,
+                            drug.usageMethod,
+                            drug.dose,
+                            drug.group,
+                            drug.price,
+                            drug.timeUntil.ToString(),
+                            drug.amount
+                    );
+                }
+            }
         }
     }
 }

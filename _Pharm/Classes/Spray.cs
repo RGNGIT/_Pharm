@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace _Pharm.Classes
 {
     // Спрей
+    [Serializable]
     internal class Spray: Drug
     {
 
